@@ -8,18 +8,18 @@ export const generateImageToolDefinition = {
     prompt: z
       .string()
       .describe(
-        `prompt for the image. Be sure to consider the user's original message when making the prompt. If you are unsure, then as the user to provide more details.`
+        `The prompt to use to generate an image or photo.`
       ),
   }),
-  description: 'generate an image',
+  description: 'use this tool with a prompt to generate or take a photo of anything.',
 }
 
 type Args = z.infer<typeof generateImageToolDefinition.parameters>
 
 export const generateImage: ToolFn<Args, string> = async ({
-  toolArgs,
-  userMessage,
-}) => {
+                                                            toolArgs,
+                                                            userMessage,
+                                                          }) => {
   const response = await openai.images.generate({
     model: 'dall-e-3',
     prompt: toolArgs.prompt,
