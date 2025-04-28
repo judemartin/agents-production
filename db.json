@@ -169,6 +169,98 @@
       "annotations": [],
       "id": "33611339-b1e4-491d-aa62-70b7f907fa10",
       "createdAt": "2025-04-28T21:30:25.568Z"
+    },
+    {
+      "role": "user",
+      "content": "let try that turtle again",
+      "id": "1a21eabf-2933-4195-87ed-e7aa3bcaeaff",
+      "createdAt": "2025-04-28T22:03:42.923Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_C8I2NBIzr8STaRnLHR4VbzLx",
+          "type": "function",
+          "function": {
+            "name": "generate_image",
+            "arguments": "{\"prompt\":\"A realistic and detailed image of a turtle swimming gracefully in clear blue water. The turtle has a textured shell with vibrant colors and patterns, surrounded by colorful coral and small fish. Sunlight filters through the water, creating a serene and peaceful underwater scene.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "a0cd955c-9815-4127-97fa-992c8aa14da2",
+      "createdAt": "2025-04-28T22:03:44.966Z"
+    },
+    {
+      "role": "tool",
+      "content": "User did not approve image generation at this time",
+      "tool_call_id": "call_C8I2NBIzr8STaRnLHR4VbzLx",
+      "id": "57ea1851-d59e-4ab1-8f69-841bbe020331",
+      "createdAt": "2025-04-28T22:03:52.371Z"
+    },
+    {
+      "role": "assistant",
+      "content": "It appears there was another issue with generating the image. If you would like to try something else or have any other requests, please let me know!",
+      "refusal": null,
+      "annotations": [],
+      "id": "b83e067c-b19b-4f0b-9fe2-af1de7ab0b02",
+      "createdAt": "2025-04-28T22:03:53.322Z"
+    },
+    {
+      "role": "user",
+      "content": "sure",
+      "id": "251f0ed6-9498-4cb3-9245-0b79b80fdf79",
+      "createdAt": "2025-04-28T22:04:00.161Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Great! What would you like to do next? If you have any specific requests or questions, feel free to share!",
+      "refusal": null,
+      "annotations": [],
+      "id": "d6d087de-1655-453e-a3b5-862ecedb9660",
+      "createdAt": "2025-04-28T22:04:02.630Z"
+    },
+    {
+      "role": "user",
+      "content": "let try that turtle again",
+      "id": "d9aa5288-8d6c-4a81-aca9-980c245851fa",
+      "createdAt": "2025-04-28T22:04:05.954Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_6WurLxcPWey97DedOnkiNg8Z",
+          "type": "function",
+          "function": {
+            "name": "generate_image",
+            "arguments": "{\"prompt\":\"A realistic and detailed image of a turtle swimming gracefully in clear blue water. The turtle has a textured shell with vibrant colors and patterns, surrounded by colorful coral and small fish. Sunlight filters through the water, creating a serene and peaceful underwater scene.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "f5a1d535-b68d-444d-9159-157bb90b3172",
+      "createdAt": "2025-04-28T22:04:08.200Z"
+    },
+    {
+      "role": "tool",
+      "content": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-9wIgdaeiHaqQ8SX7VfWhnGQP/user-uHp4mO38FYvz9xC7V2G3rtj2/img-l7rKzSlRiItjBM2oB2SoDXtu.png?st=2025-04-28T21%3A04%3A23Z&se=2025-04-28T23%3A04%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-28T14%3A44%3A40Z&ske=2025-04-29T14%3A44%3A40Z&sks=b&skv=2024-08-04&sig=TiqlnmXprnnscS7fwVJ0bLZTNooa9stZCnP7S9Oqung%3D",
+      "tool_call_id": "call_6WurLxcPWey97DedOnkiNg8Z",
+      "id": "25c00ec5-543e-418c-b429-a33579bb21df",
+      "createdAt": "2025-04-28T22:04:23.521Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the newly generated image of a turtle:\n\n![Turtle Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-9wIgdaeiHaqQ8SX7VfWhnGQP/user-uHp4mO38FYvz9xC7V2G3rtj2/img-l7rKzSlRiItjBM2oB2SoDXtu.png?st=2025-04-28T21%3A04%3A23Z&se=2025-04-28T23%3A04%3A23Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-28T14%3A44%3A40Z&ske=2025-04-29T14%3A44%3A40Z&sks=b&skv=2024-08-04&sig=TiqlnmXprnnscS7fwVJ0bLZTNooa9stZCnP7S9Oqung%3D)\n\nIf there's anything else you'd like to do, just let me know!",
+      "refusal": null,
+      "annotations": [],
+      "id": "07c216a8-c175-4abf-8917-8fc1c280c3e6",
+      "createdAt": "2025-04-28T22:04:27.639Z"
     }
   ]
 }
