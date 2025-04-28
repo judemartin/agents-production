@@ -1,16 +1,56 @@
 import { addMessages, getMessages, saveToolResponse } from './memory'
-import { runLLM } from './llm'
+import { runApprovalCheck, runLLM } from './llm'
 import { showLoader, logMessage } from './ui'
 import { runTool } from './toolRunner'
+import type { AIMessage } from "../types.ts";
+import { generateImageToolDefinition } from "./tools/generateImage.ts";
 
-export const runAgent = async ({
-  userMessage,
-  tools,
-}: {
+const handleImageApprovalFlow = async (
+  history: AIMessage[],
   userMessage: string
-  tools: any[]
-}) => {
-  await addMessages([{ role: 'user', content: userMessage }])
+) => {
+  const lastMessage = history.at(-1);
+  const toolCall = lastMessage?.tool_calls?.[0];
+
+  if (!toolCall || toolCall.function.name !== generateImageToolDefinition.name) {
+    return;
+  }
+
+  const loader = showLoader('Processing approval...');
+  const approved = await runApprovalCheck(userMessage);
+
+  if (approved) {
+    loader.update(`executing tools: ${toolCall.function.name}`);
+    const toolResponse = await runTool(toolCall, userMessage);
+
+    loader.update(`dine: ${toolCall.function.name}`);
+    await saveToolResponse(toolCall.id, toolResponse);
+  } else {
+    await saveToolResponse(
+      toolCall.id, 'User did not approve image generation at this time'
+    );
+  }
+
+  loader.stop()
+  return true;
+}
+
+export const runAgent = async (
+  {
+    userMessage,
+    tools,
+  }: {
+    userMessage: string
+    tools: any[]
+  }) => {
+
+  const history = await getMessages();
+  const isApproval = await handleImageApprovalFlow(history, userMessage);
+
+  if (!isApproval) {
+    await addMessages([{ role: 'user', content: userMessage }])
+  }
+
 
   const loader = showLoader('🤔')
 
@@ -30,6 +70,12 @@ export const runAgent = async ({
       const toolCall = response.tool_calls[0]
       logMessage(response)
       loader.update(`executing: ${toolCall.function.name}`)
+
+      if (toolCall.function.name === generateImageToolDefinition.name) {
+        loader.update('need user approval');
+        loader.stop()
+        return getMessages();
+      }
 
       const toolResponse = await runTool(toolCall, userMessage)
       await saveToolResponse(toolCall.id, toolResponse)
