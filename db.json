@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find me a scary movie about ghosts?",
+      "id": "b273ce78-89b4-431e-a3b7-e8432d509c22",
+      "createdAt": "2025-04-28T20:51:48.582Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_INK7gXZvPNkGtRhHmmyA4PKD",
+          "type": "function",
+          "function": {
+            "name": "movieSearch",
+            "arguments": "{\"query\":\"scary movie about ghosts\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "2eb2a8df-e6b9-49b8-af0a-784fd436ef9c",
+      "createdAt": "2025-04-28T20:51:49.769Z"
+    },
+    {
+      "role": "tool",
+      "content": "[\n  {\n    \"title\": \"The Ghost Writer\",\n    \"year\": 2010,\n    \"director\": \"Roman Polanski\",\n    \"actors\": \"Ewan McGregor, Pierce Brosnan, Olivia Williams,Jon Bernthal\",\n    \"rating\": 7.2,\n    \"votes\": 137964,\n    \"revenue\": null,\n    \"metascore\": 77,\n    \"description\": \"The Ghost Writer. Mystery,Thriller, A ghostwriter hired to complete the memoirs of a former British prime minister uncovers secrets that put his own life in jeopardy.\"\n  },\n  {\n    \"title\": \"Annabelle\",\n    \"year\": 2014,\n    \"director\": \"John R. Leonetti\",\n    \"actors\": \"Ward Horton, Annabelle Wallis, Alfre Woodard,Tony Amendola\",\n    \"rating\": 5.4,\n    \"votes\": 91106,\n    \"revenue\": null,\n    \"metascore\": 37,\n    \"description\": \"Annabelle. Horror,Mystery,Thriller, A couple begins to experience terrifying supernatural occurrences involving a vintage doll shortly after their home is invaded by satanic cultists.\"\n  },\n  {\n    \"title\": \"Dead Awake\",\n    \"year\": 2016,\n    \"director\": \"Phillip Guzman\",\n    \"actors\": \"Jocelin Donahue, Jesse Bradford, Jesse Borrego,Lori Petty\",\n    \"rating\": 4.7,\n    \"votes\": 523,\n    \"revenue\": null,\n    \"metascore\": 0,\n    \"description\": \"Dead Awake. Horror,Thriller, A young woman must save herself and her friends from an ancient evil that stalks its victims through the real-life phenomenon of sleep paralysis.\"\n  },\n  {\n    \"title\": \"Ghostbusters\",\n    \"year\": 2016,\n    \"director\": \"Paul Feig\",\n    \"actors\": \"Melissa McCarthy, Kristen Wiig, Kate McKinnon, Leslie Jones\",\n    \"rating\": 5.3,\n    \"votes\": 147717,\n    \"revenue\": null,\n    \"metascore\": 60,\n    \"description\": \"Ghostbusters. Action,Comedy,Fantasy, Following a ghost invasion of Manhattan, paranormal enthusiasts Erin Gilbert and Abby Yates, nuclear engineer Jillian Holtzmann, and subway worker Patty Tolan band together to stop the otherworldly threat.\"\n  },\n  {\n    \"title\": \"42\",\n    \"year\": 2013,\n    \"director\": \"Brian Helgeland\",\n    \"actors\": \"Chadwick Boseman, T.R. Knight, Harrison Ford,Nicole Beharie\",\n    \"rating\": 7.5,\n    \"votes\": 69659,\n    \"revenue\": null,\n    \"metascore\": 62,\n    \"description\": \"42. Biography,Drama,Sport, This movie is about Jackie Robinson and his journey to becoming a Brooklyn Dodger and his life during that time.\"\n  }\n]",
+      "tool_call_id": "call_INK7gXZvPNkGtRhHmmyA4PKD",
+      "id": "8b9f36bd-49ef-464e-8162-2566e3f954d2",
+      "createdAt": "2025-04-28T20:51:50.237Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some scary movies about ghosts:\n\n1. **The Ghost Writer** (2010)\n   - **Director:** Roman Polanski\n   - **Rating:** 7.2\n   - **Description:** A ghostwriter hired to complete the memoirs of a former British prime minister uncovers secrets that put his own life in jeopardy.\n\n2. **Annabelle** (2014)\n   - **Director:** John R. Leonetti\n   - **Rating:** 5.4\n   - **Description:** A couple begins to experience terrifying supernatural occurrences involving a vintage doll shortly after their home is invaded by satanic cultists.\n\n3. **Dead Awake** (2016)\n   - **Director:** Phillip Guzman\n   - **Rating:** 4.7\n   - **Description:** A young woman must save herself and her friends from an ancient evil that stalks its victims through the real-life phenomenon of sleep paralysis.\n\n4. **Ghostbusters** (2016)\n   - **Director:** Paul Feig\n   - **Rating:** 5.3\n   - **Description:** Following a ghost invasion of Manhattan, paranormal enthusiasts band together to stop the otherworldly threat.\n\nIf you need more information or recommendations, feel free to ask!",
+      "refusal": null,
+      "annotations": [],
+      "id": "b61168e0-d2b7-49a4-bca1-d66c34fadc89",
+      "createdAt": "2025-04-28T20:51:55.714Z"
+    },
+    {
+      "role": "user",
+      "content": "Okay, now generate an image for Annabelle",
+      "id": "d0dfd30f-9233-400d-8f86-a340d4238ed2",
+      "createdAt": "2025-04-28T20:52:10.576Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_jfPOAEy6Xv6PVb6biBdG0B3Q",
+          "type": "function",
+          "function": {
+            "name": "generate_image",
+            "arguments": "{\"prompt\":\"A vintage doll with a haunting expression, sitting in a dimly lit room filled with eerie shadows. The doll has long, dark hair and a white dress, with a sinister aura surrounding it. The atmosphere is tense and unsettling, evoking a sense of fear and mystery.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "130d9297-5492-4b39-9969-608109475835",
+      "createdAt": "2025-04-28T20:52:12.173Z"
+    },
+    {
+      "role": "tool",
+      "content": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-9wIgdaeiHaqQ8SX7VfWhnGQP/user-uHp4mO38FYvz9xC7V2G3rtj2/img-BtMhSPOGXN0BDz1nIF7Vowu8.png?st=2025-04-28T19%3A52%3A29Z&se=2025-04-28T21%3A52%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-28T11%3A09%3A48Z&ske=2025-04-29T11%3A09%3A48Z&sks=b&skv=2024-08-04&sig=ZLU/M3lAXMpeB8s3T823DYDyYA/KCD4hpuP8KMUqL0c%3D",
+      "tool_call_id": "call_jfPOAEy6Xv6PVb6biBdG0B3Q",
+      "id": "2b026d3c-0cb6-40c1-b5c3-13c7e37b64db",
+      "createdAt": "2025-04-28T20:52:29.298Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the generated image inspired by \"Annabelle\":\n\n![Annabelle Inspired Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-9wIgdaeiHaqQ8SX7VfWhnGQP/user-uHp4mO38FYvz9xC7V2G3rtj2/img-BtMhSPOGXN0BDz1nIF7Vowu8.png?st=2025-04-28T19%3A52%3A29Z&se=2025-04-28T21%3A52%3A29Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-28T11%3A09%3A48Z&ske=2025-04-29T11%3A09%3A48Z&sks=b&skv=2024-08-04&sig=ZLU/M3lAXMpeB8s3T823DYDyYA/KCD4hpuP8KMUqL0c%3D)\n\nIf you need anything else, just let me know!",
+      "refusal": null,
+      "annotations": [],
+      "id": "f0527867-5953-4612-8eca-0d94951ce391",
+      "createdAt": "2025-04-28T20:52:33.754Z"
+    },
+    {
+      "role": "user",
+      "content": "Hi",
+      "id": "eb13a0c0-e037-4224-9fad-7de4c5085edf",
+      "createdAt": "2025-04-28T21:28:39.822Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?",
+      "refusal": null,
+      "annotations": [],
+      "id": "8dd8f465-6ae5-4a5d-bc79-941dead059c3",
+      "createdAt": "2025-04-28T21:28:41.131Z"
+    },
+    {
+      "role": "user",
+      "content": "Generate an image of a turtle",
+      "id": "23288e26-443a-42b3-8522-28c6a66452ea",
+      "createdAt": "2025-04-28T21:28:50.719Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_5XX5DJMC8IgaQGtUpUxjjrKg",
+          "type": "function",
+          "function": {
+            "name": "generate_image",
+            "arguments": "{\"prompt\":\"A realistic and detailed image of a turtle swimming gracefully in clear blue water. The turtle has a textured shell with vibrant colors and patterns, surrounded by colorful coral and small fish. Sunlight filters through the water, creating a serene and peaceful underwater scene.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "204968c9-665c-4b3e-beaf-0e3ccf74a506",
+      "createdAt": "2025-04-28T21:28:52.366Z"
+    },
+    {
+      "role": "tool",
+      "content": "User did not approve image generation at this time",
+      "tool_call_id": "call_5XX5DJMC8IgaQGtUpUxjjrKg",
+      "id": "4d00f382-6f36-45d6-934a-1d33f4067ee2",
+      "createdAt": "2025-04-28T21:29:23.966Z"
+    },
+    {
+      "role": "assistant",
+      "content": "It seems there was an issue with generating the image. If you'd like to try again or have any other requests, please let me know!",
+      "refusal": null,
+      "annotations": [],
+      "id": "b4187e2b-d8d0-45f7-8371-a2009ea44153",
+      "createdAt": "2025-04-28T21:29:24.821Z"
+    },
+    {
+      "role": "user",
+      "content": "let try that turtle again",
+      "id": "38157f90-14b4-4713-b8b2-7c34129d8982",
+      "createdAt": "2025-04-28T21:29:59.210Z"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_B1MfL61ki9BePEjG9690vRbF",
+          "type": "function",
+          "function": {
+            "name": "generate_image",
+            "arguments": "{\"prompt\":\"A realistic and detailed image of a turtle swimming gracefully in clear blue water. The turtle has a textured shell with vibrant colors and patterns, surrounded by colorful coral and small fish. Sunlight filters through the water, creating a serene and peaceful underwater scene.\"}"
+          }
+        }
+      ],
+      "refusal": null,
+      "annotations": [],
+      "id": "7d07a8da-5221-4a3c-99c5-5055abcc4276",
+      "createdAt": "2025-04-28T21:30:00.805Z"
+    },
+    {
+      "role": "tool",
+      "content": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-9wIgdaeiHaqQ8SX7VfWhnGQP/user-uHp4mO38FYvz9xC7V2G3rtj2/img-o2imYFVjFhi5UjY8LITRlqvQ.png?st=2025-04-28T20%3A30%3A20Z&se=2025-04-28T22%3A30%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-28T06%3A57%3A33Z&ske=2025-04-29T06%3A57%3A33Z&sks=b&skv=2024-08-04&sig=KE4YGUAEvTy%2BKF/brN1hhCzl57h9cPq2vPBf/pEWe0c%3D",
+      "tool_call_id": "call_B1MfL61ki9BePEjG9690vRbF",
+      "id": "ecc9ff1f-4bd5-4559-8686-b95d0ab6a5dc",
+      "createdAt": "2025-04-28T21:30:20.966Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the generated image of a turtle:\n\n![Turtle Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-9wIgdaeiHaqQ8SX7VfWhnGQP/user-uHp4mO38FYvz9xC7V2G3rtj2/img-o2imYFVjFhi5UjY8LITRlqvQ.png?st=2025-04-28T20%3A30%3A20Z&se=2025-04-28T22%3A30%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=475fd488-6c59-44a5-9aa9-31c4db451bea&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-28T06%3A57%3A33Z&ske=2025-04-29T06%3A57%3A33Z&sks=b&skv=2024-08-04&sig=KE4YGUAEvTy%2BKF/brN1hhCzl57h9cPq2vPBf/pEWe0c%3D)\n\nIf you need anything else, feel free to ask!",
+      "refusal": null,
+      "annotations": [],
+      "id": "33611339-b1e4-491d-aa62-70b7f907fa10",
+      "createdAt": "2025-04-28T21:30:25.568Z"
+    }
+  ]
+}
