@@ -3,13 +3,14 @@ import { runLLM } from './llm'
 import { showLoader, logMessage } from './ui'
 import { runTool } from './toolRunner'
 
-export const runAgent = async ({
-  userMessage,
-  tools,
-}: {
-  userMessage: string
-  tools: any[]
-}) => {
+export const runAgent = async (
+  {
+    userMessage,
+    tools,
+  }: {
+    userMessage: string
+    tools: any[]
+  }) => {
   await addMessages([{ role: 'user', content: userMessage }])
 
   const loader = showLoader('🤔')

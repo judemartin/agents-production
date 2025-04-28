@@ -1,52 +1,59 @@
 import 'dotenv/config'
-import { Index as UpstashIndex } from '@upstash/vector'
+import { Index as UpStashIndex } from '@upstash/vector'
 import { parse } from 'csv-parse/sync'
 import fs from 'node:fs'
-import path from 'node:path'
+import path from 'path'
 import ora from 'ora'
 
-const index = new UpstashIndex()
+const index = new UpStashIndex({
+  url: process.env.UPSTASH_VECTOR_REST_URL as string,
+  token: process.env.UPSTASH_VECTOR_REST_TOKEN as string,
+});
 
-const indexMovieData = async () => {
+export async function indexMovieData() {
   const spinner = ora('Reading movie data...').start()
-  const moviesPath = path.join(process.cwd(), 'src/rag/imdb_movie_dataset.csv')
 
-  const csvData = fs.readFileSync(moviesPath, 'utf-8')
+  const csvPath = path.join(process.cwd(), 'src/rag/imdb_movie_dataset.csv')
+
+  const csvData = fs.readFileSync(csvPath, 'utf-8')
   const records = parse(csvData, {
     columns: true,
-    skip_empty_lines: true,
-  })
+    skip_empty_lines: true
+  });
 
-  spinner.text = 'Starting movie indexing...'
+  spinner.text = 'Starting movie indexing...';
 
-  for (const record of records) {
-    spinner.text = `Indexing movie ${record.Title}...`
+  for (const movie of records) {
+    spinner.text = `Indexing movie: ${movie.Title}`;
 
-    const text = `${record.Title}. ${record.Genre}. ${record.Description}.`
+    const text = `${movie.Title}. ${movie.Genre}, ${movie.Description}`
+
 
     try {
+
       await index.upsert({
-        id: record.Title,
+        id: movie.Title,
         data: text,
         metadata: {
-          title: record.Title,
-          year: Number(record.Year),
-          genre: record.Genre,
-          director: record.Director,
-          actors: record.Actors,
-          rating: Number(record.Rating),
-          votes: Number(record.Votes),
-          revenue: Number(record.Revenue),
-          metascore: Number(record.Metascore),
-        },
+          title: movie.Title,
+          year: Number(movie.Year),
+          director: movie.Director,
+          actors: movie.Actors,
+          rating: Number(movie.Rating),
+          votes: Number(movie.Votes),
+          revenue: Number(movie.Revenue),
+          metascore: Number(movie.Metascore)
+        }
       })
-    } catch (e) {
-      spinner.fail(`Error indexing movie ${record.Title}`)
-      console.error(e)
+
+    } catch (error) {
+      spinner.fail(`Error indexing movie ${movie.Title}`);
+      console.error(error)
     }
+    spinner.succeed('Finished indexing movie data')
   }
 
-  spinner.succeed('All movies indexed!')
+
 }
 
-indexMovieData()
+await indexMovieData();
